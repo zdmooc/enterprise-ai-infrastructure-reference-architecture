@@ -2,13 +2,17 @@
 
 > Référentiel public d'architecture technique, études de marché, scénarios 2026–2030 et laboratoires pour les infrastructures IA d'entreprise — focus Europe, France, banque et assurance.
 
-**Version :** 0.1.0 (initialisation) · **Date de référence :** 2026-10-10 · **Statut :** cadrage, architecture proposée, labs non exécutés
+**Version :** 0.2.0 (Green AI / Green IT intégré) · **Date de référence :** 2026-10-10 · **Statut :** référentiel documentaire ; pas de matériel requis ni de déploiement prétendu
 
 ## Mission
 
 Documenter et évaluer les infrastructures IA, des serveurs GPU aux plateformes d'inférence d'entreprise : accélérateurs, datacenters, énergie, réseaux, stockage, cloud et souveraineté, Kubernetes/OpenShift AI, MLOps/LLMOps, sécurité, résilience, FinOps et Green IT.
 
 L'objectif n'est **pas** de reproduire une architecture interne d'établissement financier, ni de présenter des preuves de déploiement inexistantes. Les exemples de banques/assurances reposent uniquement sur des annonces publiques ; la cible proposée est une **architecture de référence indépendante**.
+
+## Principes du périmètre
+
+**Ce dépôt est une étude mondiale d'architectures d'infrastructures IA que nous ne possédons pas.** Aucun OpenShift CRC, serveur privé ou GPU personnel n'est nécessaire à la V1.0 documentaire. Les laboratoires demeurent des annexes facultatives, sans condition de clôture. Le Green IT et l'empreinte carbone sur le cycle de vie sont **un fil conducteur de toutes les comparaisons**, non un sujet périphérique.
 
 ## Lire le référentiel
 
@@ -22,11 +26,15 @@ L'objectif n'est **pas** de reproduire une architecture interne d'établissement
 | Banque & assurance | [Besoins sectoriels](docs/05-finance/banking-insurance.md) |
 | Sécurité & réglementation | [Contrôles](docs/06-security-resilience/regulatory-controls.md) |
 | PRA & continuité | [Scénarios de résilience](docs/06-security-resilience/resilience-scenarios.md) |
-| TCO, coût d'inférence, énergie | [FinOps & Green IT](docs/07-finops-green-it/economics.md) |
+| TCO, coût d'inférence, énergie | [FinOps](docs/07-finops-green-it/economics.md) |
+| Green IT / ACV des infrastructures IA | [Empreinte environnementale](docs/07-finops-green-it/lifecycle-environmental-footprint.md) |
+| IA pour diminuer l'empreinte | [AI for Sustainable Datacenters](docs/07-finops-green-it/ai-for-sustainable-datacenters.md) |
+| Énergie, carbone, eau, données | [Plan de mesure](docs/07-finops-green-it/measurement-and-kpis.md) |
+| Green AI banque / assurance | [Dossiers de choix](docs/07-finops-green-it/banking-insurance-green-ai.md) |
 | POC démontrables | [Parcours de laboratoires](docs/08-labs/lab-roadmap.md) |
 | Scénarios & jalons | [Feuille de route](docs/09-strategy/roadmap-2026-2030.md) |
 | Sources datées | [Registre des sources](docs/09-strategy/sources-register.md) |
-| Décisions | [ADR-0001](adrs/ADR-0001-scope.md) · [ADR-0002](adrs/ADR-0002-hybrid-placement.md) |
+| Décisions | [ADR-0001](adrs/ADR-0001-scope.md) · [ADR-0002](adrs/ADR-0002-hybrid-placement.md) · [ADR-0003](adrs/ADR-0003-carbon-boundary.md) · [ADR-0004](adrs/ADR-0004-green-ai-safety.md) |
 
 ## Architecture logique
 
@@ -53,7 +61,16 @@ Les assertions utilisent les marqueurs suivants :
 
 Les estimations 2030 ne sont pas des certitudes, et les coûts ne doivent jamais être présentés hors date, région, unité, taxes et hypothèses de consommation. Voir [méthodologie](docs/00-governance/methodology.md).
 
-## Laboratoires (à réaliser)
+## Green IT et Green AI dans chaque comparaison
+
+- **Empreinte complète :** extraction / fabrication GPU et serveurs, fonctionnement IT et refroidissement, eau, réseau, datacenter, allongement de vie, fin de vie et incertitudes.
+- **Méthodes :** ACV, SCI for AI, PUE, WUE, ERF, émissions scopes 1/2/3 selon entité, indicateurs par **résultat utile** et non par prompt brut.
+- **Optimisation par IA :** prévisions énergie/charge, anomaly detection, cooling ML/RL avec garde-fous, placement carbon-aware, routage de petits/grands modèles, agents GreenOps conseillers.
+- **Exigence anti-greenwashing :** gains nets après énergie dépensée par l'optimiseur ; jamais de pourcentages extrapolés sans mesure, pas d'émissions évitées compensant artificiellement l'inventaire.
+
+[Diagramme Green AI](diagrams/green-ai-control-plane.mmd) · [14 itérations documentaires V1.0](docs/09-strategy/roadmap-2026-2030.md)
+
+## Laboratoires (annexes facultatives, non bloquantes)
 
 - L1 : gateway et routage de deux modèles factices **sans GPU** ;
 - L2 : inférence réelle OpenShift AI / KServe / vLLM **si GPU disponible** ;
@@ -61,7 +78,7 @@ Les estimations 2030 ne sont pas des certitudes, et les coûts ne doivent jamais
 - L4 : défaillance d'inférence, circuit breaker, audit agentique ;
 - L5 : mesures p95, débit, coût / 1 M tokens et consommation.
 
-**Aucun cluster, GPU, coût et scénario de résilience n'est déclaré opérationnel par ce dépôt initial.**
+**Les expériences ne font pas partie du critère de clôture V1.0 documentaire. Aucun cluster, GPU, coût ni scénario de résilience n'est déclaré testé sur infrastructure réelle.**
 
 ## Sources de départ
 

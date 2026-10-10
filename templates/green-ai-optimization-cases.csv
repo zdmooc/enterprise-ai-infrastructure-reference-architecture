@@ -1,0 +1,3 @@
+case_id,sector,workload,baseline_method,proposed_ai_method,optimization_objective,protected_kpi,data_inputs,measurement_boundary,baseline_period,comparison_period,site_energy_delta_kwh,carbon_delta_kgco2e,water_delta_l,optimizer_energy_kwh,quality_result,evidence_status,safety_human_approval,notes
+G1,datacenter,cooling,existing_controller,constrained_ml,reduce_cooling_kwh,thermal_limits_and_uptime,temperatures_and_powers,site,,,,,,,,NOT_TESTED,REQUIRED,Study only
+G2,banking,noncritical_batch,fixed_schedule,carbon_aware_forecasting,reduce_location_based_emissions,batch_deadline_and_data_residency,job_times_and_grid_factor,workload,,,,,,,,NOT_TESTED,REQUIRED,Study only

@@ -50,6 +50,10 @@ Un LLM ne doit jamais être le seul garant d'une opération financière irréver
 
 Kubernetes/OpenShift, KServe, vLLM, MLflow, stockage objet, Postgres/pgvector, OpenTelemetry, Prometheus, Vault, OPA/Kyverno. **Liste d'options**, pas une prescription de produits. Les choix doivent être validés en ADR, par matrice de compatibilité et laboratoire. Red Hat documente KServe et vLLM sur OpenShift AI [S10].
 
+## Green IT by Design (transverse)
+
+La plateforme proposée doit intégrer la gouvernance carbone comme critère de placement **après** confidentialité, conformité et SLO. Mesurer énergie GPU/CPU, refroidissement/périmètre site, empreinte matérielle allouée et efficacité par résultat métier utile. Inclure alternatives sans LLM, petits modèles, quantification et cache lorsque la qualité ne se dégrade pas. Pour un job différable : scheduling carbon-aware seulement entre régions/horaires déjà autorisés, avec vérification des émissions nettes. Un modèle d'optimisation AI GreenOps conseille par défaut et n'écrit pas sur le BMS/DCIM/ordonnanceur critique sans contrôle humain. Voir [ACV](../07-finops-green-it/lifecycle-environmental-footprint.md), [Green AI](../07-finops-green-it/ai-for-sustainable-datacenters.md) et [ADR-0004](../../adrs/ADR-0004-green-ai-safety.md).
+
 ## Risques à traiter
 
 Prompt injection (notamment via documents RAG), fuite multi-tenant, exfiltration par outils, compromission du registre de modèles, exhaustion GPU, dépendance fournisseur, non-déterminisme d'actions agentiques, coûts non plafonnés, dérive de modèle.

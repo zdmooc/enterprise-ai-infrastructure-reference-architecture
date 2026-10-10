@@ -36,6 +36,10 @@ Pour paiements, ordres et indemnisation, une réponse LLM n'est **pas** l'état 
 
 Évaluer contrat, concentration, sous-traitants, localisation, logs, droits d'audit, fin du service, migration des embeddings, export du catalogue de modèles, gestion d'incident et supervision. DORA [S05] doit être examiné au regard du périmètre effectif des entités et de leurs prestataires.
 
+## Décision Green IT / Green AI
+
+Ajouter obligatoirement au dossier de choix l'empreinte matérielle allouée, kWh, kgCO2e par décision valide (incluant requêtes rejetées et retries), WUE si mesurable, qualité, sécurité et coût. Étudier « pas de LLM », ML classique, SLM, LLM privé et cloud avec données comparables. Ne pas déplacer un paiement temps réel pour suivre une prévision carbone, ne pas sacrifier confidentialité ou résilience. Voir [dossier Green AI finance](../07-finops-green-it/banking-insurance-green-ai.md).
+
 ## Livrables pour un dossier de choix
 
 Contexte et BIA, cartographie de flux, classification des données, architecture logique/physique, scénarios hybride/privé/managé, matrice de contrôles, chiffrage TCO avec fourchettes, exercice de continuité, risques résiduels, décision formelle.

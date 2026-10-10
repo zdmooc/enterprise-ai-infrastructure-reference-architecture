@@ -1,0 +1,14 @@
+flowchart TB
+    MET["Mesures : site/UPS/IT GPU/CPU et eau"] --> DQ["Qualité données, unités, traçabilité"]
+    GRID["RTE, intensité carbone par zone et temps"] --> DQ
+    INV["Inventaire GPU, cycles de vie, fabrication"] --> DQ
+    DQ --> EST["Moteur ACV : SCI for AI, PUE/WUE, TCO"]
+    DQ --> ML["Prévisions charge/énergie, détection anomalies"]
+    ML --> OPT["Optimiseur sous contraintes : placement, batch, cooling"]
+    EST --> OPT
+    OPT --> POLICY{"Politique : confidentialité, DORA, SLO, sécurité"}
+    POLICY -->|Rejeté| AUDIT["Audit : refus et justification"]
+    POLICY -->|Candidat| SIM["Simulation et validation humaine"]
+    SIM -->|Approuvé| ACTION["Action technique non critique autorisée"]
+    ACTION --> VERIFY["Mesure avant/après, qualité et économies nettes"]
+    VERIFY --> AUDIT

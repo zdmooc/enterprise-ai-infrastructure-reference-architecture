@@ -26,7 +26,8 @@ Priorité : textes juridiques consolidés, superviseurs, régulateurs, organisme
 - Coût : devise, pays/région, date, engagement, stockage, réseau, licence, exploitation, refroidissement, TVA éventuelle.
 - Souveraineté : résidence des données ≠ contrôle juridique ≠ exploitation ≠ indépendance matérielle.
 - Résilience : RTO/RPO/SLO à dériver d'une BIA. Ne jamais inventer un « 99,99 % » ou « RTO 60 s ».
-- Empreinte : distinguer émissions de fabrication (allocation sur durée de vie), électricité opérationnelle, PUE, intensité carbone locale.
+- Empreinte : mesurer ou estimer explicitement fabrication GPU/HBM/CPU/serveurs/réseau/bâtiments selon frontière, électricité opérationnelle, PUE/WUE, intensité carbone locale datée, fin de vie, allocation et incertitudes. Conserver unité fonctionnelle et qualité métier équivalentes ; intégrer coût environnemental de l'optimiseur lui-même. Méthode [SCI for AI](../07-finops-green-it/lifecycle-environmental-footprint.md).
+- Green AI : comparer l'optimisation ML/agentique contre règles simples et baseline ; aucune économie garantie ou émission évitée non mesurée. Les actions touchant refroidissement et workloads critiques restent soumises à garde-fous et validation humaine.
 - Rapport externe : isoler les informations publiques des preuves de laboratoire et des projections.
 
 ## Cadence

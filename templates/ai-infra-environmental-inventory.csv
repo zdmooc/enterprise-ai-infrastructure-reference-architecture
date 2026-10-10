@@ -1,0 +1,2 @@
+inventory_id,scenario,period_start_utc,period_end_utc,geography,service_type,workload,model_id,quality_test_id,system_boundary,energy_measurement_status,it_energy_kwh,site_energy_kwh,pue,water_liters,wue_l_per_kwh_it,electricity_factor_kgco2e_per_kwh,factor_basis,factor_source,factor_timestamp,operational_kgco2e,allocated_embodied_kgco2e,embodied_source,useful_results_count,confidence_class,notes
+EXAMPLE-EMPTY,,,,,,,,,DRAFT,NOT_MEASURED,,,,,,,,,,,,,,TEMPLATE_ONLY,No actual measurements

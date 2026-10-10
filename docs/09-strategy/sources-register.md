@@ -16,6 +16,16 @@
 | S10 | [Red Hat, OpenShift AI serving](https://docs.redhat.com/en/documentation/red_hat_openshift_ai_self-managed/3.2/html-single/configuring_your_model-serving_platform/index) | Documentation produit, version 3.2 | TECHNIQUE : vLLM et KServe GPU ; vérifier correspondance avec version déployée |
 | S11 | [Groupe BPCE, MAiA](https://www.digital-payments.groupebpce.com/le-groupe-bpce-accelere-adoption-intelligence-artificielle/) | 2025 | DÉCLARATION ENTREPRISE : MAiA et >2 M prompts/mois ; pas de détails publics sur les GPU |
 
+
+| S12 | [Green Software Foundation, SCI for AI](https://greensoftware.foundation/standards/sci-ai/) et [spécification](https://github.com/Green-Software-Foundation/sci-ai/blob/main/SPEC.md) | Spécification ratifiée 2025, page consultée 2026-10-10 | MÉTHODE : SCI = (O + M) / R, mesure IA de conception à inférence, unités fonctionnelles et frontières |
+| S13 | [ADEME, IA générative : comment quantifier les impacts ?](https://www.ademe.fr/presse/communique-national/ia-generative-comment-quantifier-les-impacts/) | 2026-07-22 | FAIT PUBLIC : analyse des impacts environnementaux directs/indirects, attention sobriété et effets rebond |
+| S14 | [UE, règlement délégué 2024/1364](https://eur-lex.europa.eu/eli/reg_del/2024/1364/oj?locale=eng) | 2024 | RÉGLEMENTATION : méthode indicateurs durabilité datacenters, PUE, WUE, ERF, REF |
+| S15 | [Boavizta, méthode impacts incorporés](https://doc.api.boavizta.org/Explanations/embedded_methodology/) | Documentation évolutive, consultée 2026-10-10 | MÉTHODE : estimation d'impacts matériels avec limites, fin de vie pas toujours incluse |
+| S16 | [RTE, éCO2mix](https://www.rte-france.com/donnees-publications/eco2mix-donnees-temps-reel) | Données évolutives, consultées 2026-10-10 | DONNÉES RÉSEAU FR : production et émissions électriques ; ne mesure pas directement les datacenters |
+| S17 | [DeepMind, datacenter cooling](https://deepmind.google/discover/blog/deepmind-ai-reduces-google-data-centre-cooling-bill-by-40/) | 2016 | DÉCLARATION ENTREPRISE HISTORIQUE : jusqu'à 40 % sur **énergie refroidissement**, non énergie totale |
+| S18 | [Green Software Foundation, Carbon Aware SDK](https://carbon-aware-sdk.greensoftware.foundation/docs/overview) | Documentation consultée 2026-10-10 | OUTIL : placement temporel/géographique des tâches différables selon intensité prévue |
+| S19 | [Hugging Face, AI Energy Score](https://huggingface.github.io/AIEnergyScore/) | Documentation consultée 2026-10-10 | BENCHMARK : énergie GPU sur tâches IA ; autres composants à ajouter avant ACV complète |
+
 ## Politique de correction
 
 - Si une source change, indiquer la version/date, ne pas effacer l'historique.

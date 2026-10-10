@@ -1,6 +1,6 @@
 # FinOps, Green IT et analyse TCO des infrastructures IA
 
-**Statut :** modèle méthodologique ; aucun tarif commercial n'est figé dans ce dépôt.
+**Statut :** modèle méthodologique ; aucun tarif commercial n'est figé dans ce dépôt. Étudier conjointement [ACV complète](lifecycle-environmental-footprint.md), [Green AI](ai-for-sustainable-datacenters.md) et [KPI](measurement-and-kpis.md).
 
 ## Variables
 
@@ -41,6 +41,10 @@ Il faut publier simultanément TTFT, p95, throughput, taux d'erreurs et mesure d
 - taux de cache, quota refusé, taux de routage privé/cloud ;
 - localisation/carbone de l'électricité et impacts de la fabrication ;
 - coût de l'indisponibilité ou de la capacité inutilisée.
+
+## Contrôle carbone et sobriété
+
+Le coût par token ne prouve pas une moindre empreinte. Dans chaque scénario, publier séparément : émissions site/IT observées ou estimées, allocation fabrication, kWh/1 000 réponses validées, kgCO2e/1 000 réponses validées, WUE si accessible, incertitudes, souveraineté, qualité et p95. Calculer les gains nets après consommation de l'outil d'optimisation IA, en conservant le même service métier et les mêmes contraintes. Voir [cas banque/assurance](banking-insurance-green-ai.md).
 
 ## Décision
 
