@@ -2,7 +2,7 @@
 
 > Référentiel public d'architecture technique, études de marché, scénarios 2026–2030 et laboratoires pour les infrastructures IA d'entreprise — focus Europe, France, banque et assurance.
 
-**Version :** 0.2.0 (Green AI / Green IT intégré) · **Date de référence :** 2026-10-10 · **Statut :** référentiel documentaire ; pas de matériel requis ni de déploiement prétendu
+**Version :** 1.0.0-documentaire · **Date de référence :** 2026-10-10 · **Statut :** 14/14 études documentaires publiées ; évaluations physiques et prix contractuels non validés
 
 ## Mission
 
@@ -13,6 +13,17 @@ L'objectif n'est **pas** de reproduire une architecture interne d'établissement
 ## Principes du périmètre
 
 **Ce dépôt est une étude mondiale d'architectures d'infrastructures IA que nous ne possédons pas.** Aucun OpenShift CRC, serveur privé ou GPU personnel n'est nécessaire à la V1.0 documentaire. Les laboratoires demeurent des annexes facultatives, sans condition de clôture. Le Green IT et l'empreinte carbone sur le cycle de vie sont **un fil conducteur de toutes les comparaisons**, non un sujet périphérique.
+
+## Démarrage rapide — V1.0 documentaire
+
+- [Synthèse exécutive banque, assurance, Europe et Green IT](reports/V1.0-EXECUTIVE-SUMMARY.md)
+- [Audit V1.0 : couverture, preuves, limites](studies/I14-final-audit.md)
+- [Les 14 itérations livrées](studies/README.md)
+- [Dossier décisionnel banque/assurance](studies/I13-architecture-decision-banking-insurance.md)
+- [Calculateur carbone transparent et exemple *entièrement fictif*](tools/estimate_lca.py) — utilisable sans cloud, GPU ou CRC.
+- [Versionnement et historique](CHANGELOG.md)
+
+La version **1.0 documentaire** signifie : étude et architecture de référence rédigées et sourcées. Elle ne signifie **pas** benchmark réel, mesure carbone mesurée, SLA, capacité cloud réservée ou conformité certifiée.
 
 ## Lire le référentiel
 
@@ -34,7 +45,7 @@ L'objectif n'est **pas** de reproduire une architecture interne d'établissement
 | POC démontrables | [Parcours de laboratoires](docs/08-labs/lab-roadmap.md) |
 | Scénarios & jalons | [Feuille de route](docs/09-strategy/roadmap-2026-2030.md) |
 | Sources datées | [Registre des sources](docs/09-strategy/sources-register.md) |
-| Décisions | [ADR-0001](adrs/ADR-0001-scope.md) · [ADR-0002](adrs/ADR-0002-hybrid-placement.md) · [ADR-0003](adrs/ADR-0003-carbon-boundary.md) · [ADR-0004](adrs/ADR-0004-green-ai-safety.md) |
+| Décisions | [ADR-0001](adrs/ADR-0001-scope.md) · [ADR-0002](adrs/ADR-0002-hybrid-placement.md) · [ADR-0003](adrs/ADR-0003-carbon-boundary.md) · [ADR-0004](adrs/ADR-0004-green-ai-safety.md) · [ADR-0005](adrs/ADR-0005-financial-infrastructure-decision.md) |
 
 ## Architecture logique
 
@@ -68,9 +79,9 @@ Les estimations 2030 ne sont pas des certitudes, et les coûts ne doivent jamais
 - **Optimisation par IA :** prévisions énergie/charge, anomaly detection, cooling ML/RL avec garde-fous, placement carbon-aware, routage de petits/grands modèles, agents GreenOps conseillers.
 - **Exigence anti-greenwashing :** gains nets après énergie dépensée par l'optimiseur ; jamais de pourcentages extrapolés sans mesure, pas d'émissions évitées compensant artificiellement l'inventaire.
 
-[Diagramme Green AI](diagrams/green-ai-control-plane.mmd) · [14 itérations documentaires V1.0](docs/09-strategy/roadmap-2026-2030.md)
+[Diagramme Green AI](diagrams/green-ai-control-plane.mmd) · [14 itérations documentaires V1.0 achevées](docs/09-strategy/roadmap-2026-2030.md)
 
-## Laboratoires (annexes facultatives, non bloquantes)
+## Laboratoires (annexes facultatives pour une V2 expérimentale, non bloquantes)
 
 - L1 : gateway et routage de deux modèles factices **sans GPU** ;
 - L2 : inférence réelle OpenShift AI / KServe / vLLM **si GPU disponible** ;

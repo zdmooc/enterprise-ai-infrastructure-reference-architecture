@@ -1,0 +1,12 @@
+{
+  "status": "ILLUSTRATIVE",
+  "system_boundary": "IT + PUE + embodied allocated for 10,000 hypothetical valid results",
+  "factor_source": "HYPOTHETICAL (not France, not a provider)",
+  "factor_method": "HYPOTHETICAL location-style factor, not a real GHG inventory",
+  "model_or_workload": "fictional 10,000 valid results",
+  "it_energy_kwh": 100,
+  "pue": 1.25,
+  "grid_intensity_kgco2e_per_kwh": 0.05,
+  "allocated_embodied_kgco2e": 8,
+  "valid_results": 10000
+}
