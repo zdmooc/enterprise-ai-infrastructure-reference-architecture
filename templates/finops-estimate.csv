@@ -1,0 +1,2 @@
+scenario,region,currency,price_date,gpu_type,gpu_count,hours_per_month,gpu_hour_rate,capex,amortization_months,power_kw,pue,electricity_per_kwh,storage_per_month,network_per_month,operations_per_month,tokens_million,useful_token_quality_gate,status
+EXAMPLE-EMPTY,,,2026-10-10,,0,0,0,0,0,0,0,0,0,0,0,0,,TEMPLATE_ONLY

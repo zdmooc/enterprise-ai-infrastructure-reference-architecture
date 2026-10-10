@@ -1,0 +1,15 @@
+flowchart TB
+    APP["Applications métier : Paiements / Crédit / Sinistres / IT"] --> G["API Gateway + AI Gateway"]
+    G --> IAM["IAM / quotas / classification / audit"]
+    IAM --> O["Orchestrateur IA : assistants + agents + approval"]
+    O --> RAG["RAG / recherche ACL / stockage / données"]
+    O --> ROUTER["Routeur de modèles / politique de résidence"]
+    ROUTER --> PRIVATE["Inference privé : Kubernetes / OpenShift AI / KServe"]
+    ROUTER --> CLOUD["GPU cloud / API externe préalablement autorisée"]
+    PRIVATE --> OBS["Telemetry : p95, qualité, énergie, coût / tokens"]
+    CLOUD --> OBS
+    MLOPS["Registry / GitOps / évaluations / sécurité artefacts"] --> PRIVATE
+    MLOPS --> CLOUD
+    GOV["DORA / AI Act / RGPD / gestion fournisseurs"] -.-> G
+    GOV -.-> O
+    GOV -.-> MLOPS
