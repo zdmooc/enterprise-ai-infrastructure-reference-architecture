@@ -1,0 +1,20 @@
+flowchart TB
+    USERS["Banque / Assurance: applications et utilisateurs"] --> API["IAM + API/AI Gateway + Data Classification"]
+    API --> POLICY["Policy Engine: DORA / RGPD / AI Act / SLO"]
+    POLICY --> ROUTER{"Route selon risques, qualité, coût et ACV"}
+    ROUTER --> SIMPLE["Sans LLM: règles / ML CPU"]
+    ROUTER --> PVT["Inference privée approuvée"]
+    ROUTER --> EU["Cloud UE autorisé par contrat"]
+    ROUTER --> EXT["Cloud public externe explicitement autorisé"]
+    API --> RAG["RAG / recherche indexée avec ACL"]
+    RAG --> ROUTER
+    PVT --> VALID["Validation humaine ou déterministe"]
+    EU --> VALID
+    EXT --> VALID
+    SIMPLE --> VALID
+    VALID --> BIZ["API métier sécurisée / audit / idempotence"]
+    MEASURE["Énergie, fabrication allouée, eau, € et kgCO2e / résultat valide"] -.-> ROUTER
+    POLICY -.-> MEASURE
+    BIZ -.-> MEASURE
+    classDef guarded fill:#e7f1ed,stroke:#397861,color:#153b2e
+    class POLICY,BIZ guarded
